@@ -1,31 +1,34 @@
 {
-  "name": "katanoko",
-  "version": "0.1.0",
-  "description": "A tool that generates Typescript type files from a database.",
-  "main": "dist/index.js",
-  "bin": {
-    "katanoko": "dist/index.js"
-  },
-  "type": "module",
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch"
-  },
-  "keywords": [
-    "typescript",
-    "database",
-    "generator",
-    "types",
-    "codegen",
-    "cli"
-  ],
-  "author": "akr5061987@gmail.com",
-  "license": "MIT",
-  "dependencies": {
-    "cac": "^6.7.14"
-  },
-  "devDependencies": {
-    "@types/node": "^24.3.1",
-    "typescript": "^5.9.2"
-  }
+    "name": "katanoko",
+    "version": "0.1.0",
+    "description": "A tool that generates Typescript type files from a database.",
+    "main": "dist/index.js",
+    "bin": {
+        "katanoko": "dist/index.js"
+    },
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "format": "prettier --write \"**/*.{ts,json}\""
+    },
+    "keywords": [
+        "typescript",
+        "database",
+        "generator",
+        "types",
+        "codegen",
+        "cli"
+    ],
+    "author": "akr5061987@gmail.com",
+    "license": "MIT",
+    "dependencies": {
+        "cac": "^6.7.14"
+    },
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+        "@types/node": "^24.3.1",
+        "prettier": "3.6.2",
+        "typescript": "^5.9.2"
+    }
 }
