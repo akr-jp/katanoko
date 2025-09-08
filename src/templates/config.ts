@@ -1,4 +1,7 @@
 /**
+ * Template for katanoko.config.ts
+ */
+export const configTemplate = `/**
  * katanoko settings
  */
 export interface Config {
@@ -33,3 +36,4 @@ export default {
         dir: './types',
     },
 } satisfies Config;
+`;

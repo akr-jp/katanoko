@@ -2,19 +2,9 @@
 import { cac } from 'cac';
 import { promises as fs } from 'fs';
 import path from 'path';
+import { configTemplate } from './templates/config';
 
 const cli = cac('katanoko');
-
-const configTemplate = `import type { Config } from "katanoko";
-
-export default {
-  database: "postgresql",
-  connectionString: "postgres://katanoko:katanoko@pg-17:5432/katanoko",
-  output: {
-    dir: "./types",
-  },
-} satisfies Config;
-`;
 
 cli.command('init', 'Create a new katanoko.config.ts file').action(async () => {
     const configPath = path.join(process.cwd(), 'katanoko.config.ts');
