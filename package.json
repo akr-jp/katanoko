@@ -2,8 +2,14 @@
   "name": "katanoko",
   "version": "0.1.0",
   "description": "A tool that generates Typescript type files from a database.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "bin": {
+    "katanoko": "dist/index.js"
+  },
+  "type": "module",
   "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
   },
   "keywords": [
     "typescript",
@@ -14,5 +20,12 @@
     "cli"
   ],
   "author": "akr5061987@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cac": "^6.7.14"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "typescript": "^5.9.2"
+  }
 }
