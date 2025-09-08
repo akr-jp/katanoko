@@ -7,7 +7,7 @@ services:
             dockerfile: Dockerfile
 
         volumes:
-            - /home/.gemini/:/workspace/.gemini:cached
+            - ~/.gemini/:/workspace/.gemini:cached
             - ../:/workspace:cached
             - /var/run/docker.sock:/var/run/docker.sock
 
