@@ -1,0 +1,43 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node-postgres
+{
+    "name": "Katanoko",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "workbench.colorCustomizations": {
+                    "activityBar.background": "#f8f8f8",
+                    "activityBar.activeBackground": "#f8f8f8",
+                    "activityBar.foreground": "#202020",
+                    "activityBar.inactiveForeground": "#20202044",
+                    "activityBar.activeBorder": "#202020",
+                    "activityBar.activeFocusBorder": "#202020",
+                    "activityBar.border": "#000000",
+                    "activityBar.dropBorder": "#c4c4c4"
+                },
+                "editor.codeLens": true
+            },
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "eamodio.gitlens",
+                "EditorConfig.EditorConfig",
+                "Google.geminicodeassist",
+                "ludwhe.vscode-uuid"
+            ]
+        }
+    },
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    "features": {},
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // This can be used to network with other containers or with the host.
+    // "forwardPorts": [],
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "bun upgrade",
+    // Configure tool-specific properties.
+    // "customizations": {},
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    "remoteUser": "root"
+}
