@@ -9,8 +9,7 @@
     "scripts": {
         "build": "rm -rf dist && tsc",
         "dev": "tsc --watch",
-        "link": "pnpm link && chmod +x dist/index.js",
-        "katanoko:init": "katanoko init"
+        "link": "pnpm link && chmod +x dist/index.js"
     },
     "keywords": [
         "typescript",
