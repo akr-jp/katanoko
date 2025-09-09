@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      cac:
-        specifier: ^6.7.14
-        version: 6.7.14
     devDependencies:
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^5.2.2
@@ -21,6 +17,13 @@ importers:
       prettier:
         specifier: 3.6.2
         version: 3.6.2
+
+  packages/katanoko:
+    dependencies:
+      cac:
+        specifier: ^6.7.14
+        version: 6.7.14
+    devDependencies:
       typescript:
         specifier: ^5.9.2
         version: 5.9.2

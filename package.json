@@ -1,35 +1,12 @@
 {
-    "name": "katanoko",
-    "version": "0.1.0",
-    "description": "A tool that generates Typescript type files from a database.",
-    "main": "dist/index.js",
-    "bin": {
-        "katanoko": "dist/index.js"
-    },
+    "name": "@akr-jp/katanoko-workspace",
+    "private": true,
     "scripts": {
-        "format": "prettier --write \"**/*.{ts,json}\"",
-        "build": "rm -rf dist && tsc",
-        "dev": "tsc --watch",
-        "link": "pnpm link && chmod +x dist/index.js",
-        "katanoko:init": "katanoko init"
-    },
-    "keywords": [
-        "typescript",
-        "database",
-        "generator",
-        "types",
-        "codegen",
-        "cli"
-    ],
-    "author": "akr5061987@gmail.com",
-    "license": "MIT",
-    "dependencies": {
-        "cac": "^6.7.14"
+        "format": "prettier --write \"**/*.{ts,json}\""
     },
     "devDependencies": {
         "@trivago/prettier-plugin-sort-imports": "^5.2.2",
         "@types/node": "^24.3.1",
-        "prettier": "3.6.2",
-        "typescript": "^5.9.2"
+        "prettier": "3.6.2"
     }
 }
