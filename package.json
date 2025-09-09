@@ -10,7 +10,7 @@
         "format": "prettier --write \"**/*.{ts,json}\"",
         "build": "rm -rf dist && tsc",
         "dev": "tsc --watch",
-        "link": "npm link && chmod +x dist/index.js",
+        "link": "pnpm link && chmod +x dist/index.js",
         "katanoko:init": "katanoko init"
     },
     "keywords": [
