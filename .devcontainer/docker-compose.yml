@@ -16,7 +16,25 @@ services:
         command: sleep infinity
 
         depends_on:
+            - pg-16
             - pg-17
+
+    pg-16:
+        container_name: katanoko-pg-16
+
+        build:
+            context: ./pg/pg-16
+            dockerfile: Dockerfile
+
+        restart: unless-stopped
+
+        volumes:
+            - postgres-16-data:/var/lib/postgresql/data
+
+        env_file: ./pg/.env
+
+        ports:
+            - '48916:5432'
 
     pg-17:
         container_name: katanoko-pg-17
@@ -28,7 +46,7 @@ services:
         restart: unless-stopped
 
         volumes:
-            - postgres-data:/var/lib/postgresql/data
+            - postgres-17-data:/var/lib/postgresql/data
 
         env_file: ./pg/.env
 
@@ -36,4 +54,5 @@ services:
             - '48917:5432'
 
 volumes:
-    postgres-data:
+    postgres-16-data:
+    postgres-17-data:

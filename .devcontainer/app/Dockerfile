@@ -14,3 +14,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh
 RUN sudo -E bash nodesource_setup.sh
 RUN sudo apt-get install -y nodejs
 RUN rm nodesource_setup.sh
+
+# pnpm
+# https://pnpm.io/ja/installation
+RUN npm install -g pnpm
+ENV PNPM_HOME="/root/.local/share/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"

@@ -135,3 +135,5 @@ vite.config.ts.timestamp-*
 
 # AI
 .gemini/
+
+.pnpm-store/
