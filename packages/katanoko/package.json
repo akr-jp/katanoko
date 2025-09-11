@@ -4,12 +4,12 @@
     "description": "A tool that generates Typescript type files from a database.",
     "main": "dist/index.js",
     "bin": {
-        "katanoko": "dist/index.js"
+        "katanoko": "dist/src/index.js"
     },
     "scripts": {
         "build": "rm -rf dist && tsc",
         "dev": "tsc --watch",
-        "link": "pnpm link && chmod +x dist/index.js"
+        "link": "pnpm link && chmod +x dist/src/index.js"
     },
     "keywords": [
         "typescript",
