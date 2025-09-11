@@ -3,6 +3,7 @@ import { cac } from 'cac';
 import { promises as fs } from 'fs';
 import inquirer from 'inquirer';
 import path from 'path';
+import pkg from '../package.json';
 import { createConfigTemplate } from './templates/config';
 
 const cli = cac('katanoko');
@@ -30,6 +31,6 @@ cli.command('init', 'Create a new katanoko.config.ts file').action(async () => {
 });
 
 cli.help();
-cli.version('0.1.0');
+cli.version(pkg.version);
 
 cli.parse();
