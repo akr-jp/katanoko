@@ -1,0 +1,9 @@
+{
+    "name": "@akr-jp/test-pg-16",
+    "description": "katanoko test project for PostgreSQL 16.",
+    "scripts": {
+        "init": "katanoko init"
+    },
+    "author": "akr5061987@gmail.com",
+    "license": "MIT"
+}
