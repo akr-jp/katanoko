@@ -28,7 +28,7 @@ export interface Config {
  */
 export default {
     database: 'postgresql',
-    connectionString: 'postgres://katanoko:katanoko@pg-17:5432/katanoko',
+    connectionString: 'postgres://katanoko:katanoko@pg-16:5432/katanoko',
     output: {
         dir: './types',
     },
