@@ -32,7 +32,7 @@ export interface Config {
  */
 export default {
     database: 'postgresql',
-    connectionString: 'postgres://katanoko:katanoko@localhost:5432/katanoko',
+    connectionString: 'postgres://user:password@localhost:5432/database',
     output: {
         dir: './types',
     },
@@ -69,7 +69,7 @@ export interface Config {
  */
 export default {
     database: 'mysql',
-    connectionString: 'mysql://user:password@host:3306/database',
+    connectionString: 'mysql://user:password@localhost:3306/database',
     output: {
         dir: './types',
     },
