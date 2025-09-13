@@ -5,11 +5,31 @@ interface ConfigOptions {
 const postgresqlTemplate = () => `/**
  * katanoko settings
  */
-export interface Config {
+export type Config = {
     /**
      * Database type
      */
     database: 'postgresql';
+
+    /**
+     * Database connection string
+     */
+    connectionString: string;
+
+    /**
+     * Output settings
+     */
+    output: {
+        /**
+         * Output directory for type files
+         */
+        dir: string;
+    };
+} | {
+    /**
+     * Database type
+     */
+    database: 'mysql';
 
     /**
      * Database connection string
@@ -42,7 +62,27 @@ export default {
 const mysqlTemplate = () => `/**
  * katanoko settings
  */
-export interface Config {
+export type Config = {
+    /**
+     * Database type
+     */
+    database: 'postgresql';
+
+    /**
+     * Database connection string
+     */
+    connectionString: string;
+
+    /**
+     * Output settings
+     */
+    output: {
+        /**
+         * Output directory for type files
+         */
+        dir: string;
+    };
+} | {
     /**
      * Database type
      */
