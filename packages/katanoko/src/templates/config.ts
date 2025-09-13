@@ -25,6 +25,13 @@ export type Config = {
          */
         dir: string;
     };
+
+    /**
+     * Type mapping from database types to TypeScript types
+     */
+    typeMapping: {
+        [key: string]: string;
+    };
 } | {
     /**
      * Database type
@@ -45,6 +52,13 @@ export type Config = {
          */
         dir: string;
     };
+
+    /**
+     * Type mapping from database types to TypeScript types
+     */
+    typeMapping: {
+        [key: string]: string;
+    };
 }
 
 /**
@@ -55,6 +69,17 @@ export default {
     connectionString: 'postgres://user:password@localhost:5432/database',
     output: {
         dir: './types',
+    },
+    typeMapping: {
+        'int4': 'number',
+        'integer': 'number',
+        'varchar': 'string',
+        'text': 'string',
+        'timestamp': 'string',
+        'timestamptz': 'string',
+        'bool': 'boolean',
+        'json': 'any',
+        'jsonb': 'any',
     },
 } satisfies Config;
 `;
@@ -82,6 +107,13 @@ export type Config = {
          */
         dir: string;
     };
+
+    /**
+     * Type mapping from database types to TypeScript types
+     */
+    typeMapping: {
+        [key: string]: string;
+    };
 } | {
     /**
      * Database type
@@ -102,6 +134,14 @@ export type Config = {
          */
         dir: string;
     };
+
+    /**
+     * Type mapping from database types to TypeScript types
+     * TODO: Adjust for MySQL
+     */
+    typeMapping: {
+        [key: string]: string;
+    };
 }
 
 /**
@@ -112,6 +152,14 @@ export default {
     connectionString: 'mysql://user:password@localhost:3306/database',
     output: {
         dir: './types',
+    },
+    typeMapping: {
+        'int': 'number',
+        'varchar': 'string',
+        'text': 'string',
+        'timestamp': 'string',
+        'tinyint': 'boolean',
+        'json': 'any',
     },
 } satisfies Config;
 `;

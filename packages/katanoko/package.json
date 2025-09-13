@@ -22,11 +22,14 @@
     "author": "akr5061987@gmail.com",
     "license": "MIT",
     "dependencies": {
+        "bundle-require": "^5.1.0",
         "cac": "^6.7.14",
-        "inquirer": "^12.9.4"
+        "inquirer": "^12.9.4",
+        "pg": "^8.16.3"
     },
     "devDependencies": {
         "@types/inquirer": "^9.0.9",
+        "@types/pg": "^8.15.5",
         "typescript": "^5.9.2"
     }
 }

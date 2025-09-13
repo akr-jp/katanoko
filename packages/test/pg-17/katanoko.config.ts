@@ -21,6 +21,13 @@ export interface Config {
          */
         dir: string;
     };
+
+    /**
+     * Type mapping from database types to TypeScript types
+     */
+    typeMapping: {
+        [key: string]: string;
+    };
 }
 
 /**
@@ -31,5 +38,16 @@ export default {
     connectionString: 'postgres://katanoko:katanoko@pg-17:5432/katanoko',
     output: {
         dir: './types',
+    },
+    typeMapping: {
+        int4: 'number',
+        integer: 'number',
+        varchar: 'string',
+        text: 'string',
+        timestamp: 'string',
+        timestamptz: 'string',
+        bool: 'boolean',
+        json: 'any',
+        jsonb: 'any',
     },
 } satisfies Config;

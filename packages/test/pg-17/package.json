@@ -2,7 +2,8 @@
     "name": "@akr-jp/test-pg-17",
     "description": "katanoko test project for PostgreSQL 17.",
     "scripts": {
-        "init": "katanoko init"
+        "init": "katanoko init",
+        "gen": "katanoko gen"
     },
     "author": "akr5061987@gmail.com",
     "license": "MIT"
